@@ -22,10 +22,10 @@ if (!navigator.geolocation) {
         lng,
         document.querySelector("#latitude").value,
         document.querySelector("#longitude").value
-      )} км`; //расстояние между точками 980 м
+      ).toFixed(2)} км`; //расстояние между точками 980 м
 
-      $(".latitude").text(lat.toFixed(3));
-      $(".longitude").text(lng.toFixed(3));
+      $(".latitude").text(lat.toFixed(4));
+      $(".longitude").text(lng.toFixed(4));
       $(".coordinates").addClass("visible");
 
       // Create a new map and place a marker at the device location.
